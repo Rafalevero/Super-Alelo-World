@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Alelo World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Tela de Início -->
+    <div id="start-screen" class="screen active">
+        <h1>Super Alelo World</h1>
+        <p>Escolha seu personagem para começar</p>
+        <div id="character-selection">
+            <div class="character-option" data-char="Mario">
+                <img src="https://www.mario-kart.net/images/8/8d/mk8dx-mario.png" alt="Mario">
+                <span>Mario</span>
+            </div>
+            <div class="character-option" data-char="Luigi">
+                <img src="https://www.mario-kart.net/images/a/a8/mk8dx-luigi.png" alt="Luigi">
+                <span>Luigi</span>
+            </div>
+            <div class="character-option" data-char="Peach">
+                <img src="https://www.mario-kart.net/images/3/3f/mk8dx-peach.png" alt="Peach">
+                <span>Peach</span>
+            </div>
+            <div class="character-option" data-char="Toad">
+                <img src="https://www.mario-kart.net/images/b/be/mk8dx-toad.png" alt="Toad">
+                <span>Toad</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela do Quiz -->
+    <div id="quiz-screen" class="screen">
+        <div id="hud">
+            <div id="player-info">
+                <img id="hud-char-img" src="" alt="Personagem">
+                <span id="hud-char-name"></span>
+            </div>
+            <div id="score-info">Pontos: <span id="score">0</span></div>
+            <div id="lives-info">Vidas: <span id="lives">2</span></div>
+        </div>
+        <div id="game-area">
+            <div id="question-container">
+                <p id="question-text"></p>
+            </div>
+            <div id="options-container">
+                <!-- Opções serão inseridas via JS -->
+            </div>
+            <div id="villain-tip" class="hidden">
+                <img id="villain-img" src="" alt="Vilão">
+                <p id="villain-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela de Fim de Jogo -->
+    <div id="game-over-screen" class="screen">
+        <h2>Fim de Jogo!</h2>
+        <p>Sua pontuação final: <span id="final-score"></span></p>
+        <p>Insira seu nome para o ranking:</p>
+        <input type="text" id="player-name-input" placeholder="Seu nome">
+        <button id="save-score-btn">Salvar</button>
+    </div>
+
+    <!-- Tela de Ranking -->
+    <div id="ranking-screen" class="screen">
+        <h2>Top 10 Melhores</h2>
+        <ol id="ranking-list">
+            <!-- Ranking será inserido via JS -->
+        </ol>
+        <button id="play-again-btn">Jogar Novamente</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
